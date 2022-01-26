@@ -1,9 +1,27 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let reverseWord = [];
+  
+  for (let i = 0; i < word.length; i++) {
+    reverseWord.unshift(word[i]);
+  }
+
+  reverseWord = reverseWord.join("");
+  
+  if (word === reverseWord) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /* 
-  Add your pseudocode here
+  pseudocode:
+
+  create a blank string reverseWord
+  iterate through each letter in word and UNSHIFT into reverseWord
+  compare word to reverseWord
+    if === then true
+          else false
 */
 
 /*
